@@ -62,7 +62,7 @@ jobs:
           path: '**/build/reports/lint-results-*'
 
   notification_job:
-    needs: [test_job, lint_job, assemble_distribute_job]
+    needs: [test_job, lint_job]
     name: Notify Build Status
     runs-on: ubuntu-latest
     steps:
